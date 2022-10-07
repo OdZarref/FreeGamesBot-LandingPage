@@ -1,5 +1,6 @@
 body {
-    background-color: #160015;
+    /* background-color: #160015; */
+    background: linear-gradient(68.15deg, #080108 16.62%, #1c031c 85.61%);
     margin: 0px;
     padding: 0px;;
 }
@@ -46,10 +47,10 @@ main > div {
     border-bottom: 0.4ch solid rgb(68, 66, 66);
 }
 
-main > section.content {
+main > section#content {
     display: flex;
     flex-direction: column;
-    font-family: 'Mako', sans-serif;
+    font-family: 'Oswald', sans-serif;
     font-size: 60px;
     font-weight: normal;
     color: white;
@@ -57,17 +58,17 @@ main > section.content {
     align-items: center;
 }
 
-main > section.content > p {
+main > section#content > p {
     margin: 5px;
     padding: 5px;
     font-size: 30px;
 }
 
 section.text {
-    font-family: 'Mako', sans-serif;
+    font-family: 'Oswald', sans-serif;
     color: white;
-    margin-left: 100px;
-    margin-top: -100px;
+    margin-left: 150px;
+    margin-top: -200px;
 }
 
 #p1 {
@@ -104,7 +105,7 @@ footer {
     justify-content: center;
     align-items: center;
     padding: 10px;
-    margin: 0;
+    margin: 60px 0px 0px 0px;
 }
 
 footer > div > a > img {
