@@ -1,0 +1,38 @@
+body {
+    background: black;
+    color: white;
+    font-family: 'Kode Mono', monospace;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.nav-bar ul {
+    display: flex;
+    justify-content: end;
+}
+
+.nav-bar ul li {
+    text-decoration: none;
+    list-style-type: none;
+    margin: 10px;
+    font-size: 25px;
+}
+
+.nav-bar ul li a:hover {
+    background: white;
+    color: black;
+    padding: 0 10px;
+}
+
+.background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    cursor: pointer;
+}
+
+circle {
+    display: none;
+}
