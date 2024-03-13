@@ -56,5 +56,5 @@ function backgroundTextEffect() {
     }, 100);
 }
 
-// callGlitched();
+callGlitched();
 backgroundTextEffect();
