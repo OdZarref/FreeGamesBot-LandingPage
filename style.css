@@ -1,3 +1,7 @@
+* {
+    padding: 0;
+    margin: 0;
+}
 body {
     position: relative;
     background: black;
@@ -6,6 +10,13 @@ body {
     font-optical-sizing: auto;
     font-weight: 200;
     font-style: normal;
+    /* overflow: hidden; */
+}
+
+.background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
     overflow: hidden;
 }
 
@@ -23,11 +34,11 @@ body {
 
 .bottom-right {
     left: 30%;
-    top: 25%;
+    top: -30%;
 }
 
 .top-left {
-    left: -30%;
+    left: -20%;
     top: -30%;
 }
 
@@ -36,6 +47,7 @@ body {
     justify-content: space-between;
     padding: 20px;
     z-index: 1;
+    border-bottom: solid 1px white;
 }
 
 .logo a img {
@@ -64,38 +76,58 @@ body {
     padding: 0 10px;
 }
 
-.terminal-texting {
-    font-size: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-    color: rgb(255, 255, 255);
-    /* filter: blur(50px); */
-}
-
 .content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding: 200 200px;
     z-index: 1;
 }
 
 .features-list {
     font-size: 30px;
+    margin-right: 200px;
 }
 
 .features-list ul li {
     margin: 20px;
 }
 
-p {
-    margin: 0;
-    padding: 0;
-    text-align: center;
+.feature-bot {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    overflow: hidden;
+}
+
+.bot-name {
+    font-family: 'VT323', monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 400px;
+}
+
+.slogan {
+    margin-left: 15px;
+    margin-top: -70px;
+}
+
+.animated-border {
+    height: 400px;
+    width: 400px;
+    background-color: white;
+    z-index: 3;
 }
 
 .style {
     font-size: 60px;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
