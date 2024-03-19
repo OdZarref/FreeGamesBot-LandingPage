@@ -66,4 +66,6 @@ function backgroundTextEffect() {
     }, 100);
 }
 
-callGlitched();
+document.querySelector('.border').style.left = '-20px';
+document.querySelector('.border-middle').style.top = '140px';
+
