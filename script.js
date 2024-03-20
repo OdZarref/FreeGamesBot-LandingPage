@@ -8,7 +8,7 @@ function glitchedLetterEffect(element) {
         element.innerText = element.innerText
             .split('')
             .map((_, index) => {
-                console.log(element.dataset.value);
+
                 if (iterations >= index) return element.dataset.value[index];
                 else return alphabet[Math.floor(Math.random() * 26)];
             })
@@ -20,7 +20,7 @@ function glitchedLetterEffect(element) {
     }, 30);
 }
 
-function callGlitched() {
+function glitchedCall() {
     document.querySelectorAll('.glitched').forEach((element) => {
         glitchedLetterEffect(element);
     });
@@ -66,6 +66,15 @@ function backgroundTextEffect() {
     }, 100);
 }
 
+function fadeInCall() {
+    function fadeIn(element) {
+        element.style.opacity = '100';
+    }
+    document.querySelectorAll('.fade-in').forEach((element) => {
+        fadeIn(element);
+    });
+}
+
+fadeInCall();
 document.querySelector('.border').style.left = '-20px';
 document.querySelector('.border-middle').style.top = '140px';
-

@@ -87,7 +87,7 @@ body {
     height: 3px;
     width: 100vw;
     background-color: white;
-    transition: 2s;
+    transition: 3s;
     left: -100vw;
 }
 
@@ -95,10 +95,10 @@ body {
     position: absolute;
     top: 100vh;
     left: 53vw;
-    height: 100%;
+    height: 750px;
     width: 3px;
     background-color: white;
-    transition: 2s;
+    transition: 3s;
 }
 
 .features-list {
@@ -150,15 +150,14 @@ body {
     margin-top: -70px;
 }
 
-.animated-border {
-    height: 400px;
-    width: 400px;
-    background-color: white;
-    z-index: 3;
-}
 
 .style {
     font-size: 60px;
+}
+
+.fade-in {
+    opacity: 0;
+    transition: 3s;
 }
 
 @keyframes rotate {
