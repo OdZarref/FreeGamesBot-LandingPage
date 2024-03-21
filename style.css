@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 body {
@@ -149,7 +150,6 @@ body {
     margin-left: 15px;
     margin-top: -70px;
 }
-
 
 .style {
     font-size: 60px;
