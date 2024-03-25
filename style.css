@@ -21,7 +21,6 @@ body {
     position: absolute;
     height: 100%;
     width: 100%;
-    overflow: hidden;
 }
 
 .animated-background {
@@ -78,9 +77,8 @@ body {
 .content {
     display: flex;
     align-items: center;
+    height: 70vh;
     justify-content: space-around;
-    padding: 200px 200px;
-    z-index: 1;
 }
 
 .border {
@@ -103,9 +101,7 @@ body {
 }
 
 .features-list {
-    margin-top: 50px;
     font-size: 30px;
-    left: -500px;
 }
 
 .features-list ul {
@@ -166,5 +162,15 @@ body {
     }
     to {
         transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 1024px) {
+    .border-middle {
+        left: 55vw;
+    }
+
+    .features-list {
+        font-size: 26px;
     }
 }
