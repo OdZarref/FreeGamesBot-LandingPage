@@ -2,10 +2,11 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    overflow: hidden;
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     height: 100%;
     position: relative;
     background: rgb(3, 0, 5);
@@ -14,141 +15,97 @@ body {
     font-optical-sizing: auto;
     font-weight: 200;
     font-style: normal;
-    /* overflow: hidden; */
-}
-
-.background {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-}
-
-.animated-background {
-    position: absolute;
-    height: 50vh;
-    width: 50vw;
-    margin: 0;
-    padding: 0;
-    background-image: url('images/img.svg');
-    background-repeat: no-repeat;
-    z-index: -1;
-    filter: blur(50px);
 }
 
 .nav-bar {
     display: flex;
+    flex-direction: row;
+    align-items: center;
     justify-content: space-between;
-    padding: 20px;
-    z-index: 1;
-    /* border-bottom: solid 1px white; */
 }
 
-.logo a img {
-    height: 100px;
-    width: 100px;
-    color: white;
-    cursor: pointer;
+.nav-bar .logo a img {
+    height: 10vh;
 }
 
 .nav-bar ul {
     display: flex;
-    justify-content: end;
-    align-items: center;
+    flex-direction: row;
 }
 
 .nav-bar ul li {
-    text-decoration: none;
     list-style-type: none;
     margin: 10px;
-    font-size: 25px;
 }
 
 .nav-bar ul li a {
     text-decoration: none;
     color: white;
+    font-size: 25px;
+    padding: 10px;
 }
 
 .nav-bar ul li a:hover {
-    background: white;
+    background-color: white;
     color: black;
-    padding: 0 10px;
 }
 
 .content {
     display: flex;
-    align-items: center;
-    height: 70vh;
-    justify-content: space-around;
-}
-
-.border {
-    position: absolute;
-    height: 3px;
-    width: 100vw;
-    background-color: white;
-    transition: 3s;
-    left: -100vw;
-}
-
-.border-middle {
-    position: absolute;
-    top: 100vh;
-    left: 53vw;
-    height: 750px;
-    width: 3px;
-    background-color: white;
-    transition: 3s;
-}
-
-.features-list {
-    font-size: 30px;
-}
-
-.features-list ul {
-    list-style: none;
-    cursor: pointer;
-}
-
-.features-list ul li {
-    margin: 20px;
-}
-
-.features-list ul li::after {
-    position: relative;
-    display: block;
-    content: '';
-    background-color: white;
-    width: 0px;
-    height: 3px;
-    top: -5px;
-    transition: 0.5s;
-}
-
-.features-list ul li:hover::after {
-    width: 600px;
-}
-
-.feature-bot {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
+    height: 100vh;
     overflow: hidden;
 }
 
-.bot-name {
+.content .features-list {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+}
+
+.content .features-list ul li {
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+
+.content .feature-bot {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+}
+
+.content .feature-bot .bot-name {
     font-family: 'VT323', monospace;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 400px;
+    font-size: 600px;
+    padding: 0;
+    margin: 0;
 }
 
-.slogan {
-    margin-left: 15px;
-    margin-top: -70px;
+.content .feature-bot .slogan {
+    padding: 0;
+    margin-top: -100px;
+    font-size: 20px;
 }
 
-.style {
-    font-size: 60px;
+.border {
+    position: relative;
+    left: -100%;
+    height: 2px;
+    width: 100vw;
+    background-color: white;
+    transition: 3s;
+}
+
+.border-middle {
+    position: relative;
+    bottom: -100%;
+    height: 100vh;
+    width: 2px;
+    background-color: white;
+    transition: 3s;
 }
 
 .fade-in {
@@ -156,21 +113,16 @@ body {
     transition: 3s;
 }
 
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-@media (max-width: 1024px) {
-    .border-middle {
-        left: 55vw;
+@media (max-width: 1400px) {
+    .content .features-list ul li {
+        font-size: 25px;
     }
 
-    .features-list {
-        font-size: 26px;
+    .content .feature-bot .bot-name {
+        font-size: 400px;
+    }
+
+    .content .feature-bot .slogan {
+        margin-top: -50px;
     }
 }
