@@ -75,7 +75,7 @@ function callFadeIn() {
 }
 
 function callBorders() {
-    document.querySelector('.border').style.left = '0';
+    document.querySelector('.border-top').style.left = '0';
     document.querySelector('.border-middle').style.bottom = '0';
 }
 
