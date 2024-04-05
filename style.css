@@ -116,3 +116,9 @@ body {
     opacity: 0;
     transition: 3s;
 }
+
+@media screen and (min-width: 1400px) {
+    .content .feature-bot .bot-name {
+        font-size: 400px;
+    }
+}
