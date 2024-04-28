@@ -70,7 +70,7 @@ body {
 
 .content .features-list ul li {
     list-style-type: none;
-    margin-bottom: 20px;
+    margin: 20px;
 }
 
 .content .feature-bot {
@@ -85,7 +85,6 @@ body {
     font-family: 'VT323', monospace;
     font-size: 600px;
     padding: 0;
-    margin: 0;
 }
 
 .content .feature-bot .slogan {
@@ -117,8 +116,32 @@ body {
     transition: 3s;
 }
 
-@media screen and (min-width: 1400px) {
+@media (width < 1400px) {
     .content .feature-bot .bot-name {
         font-size: 400px;
+    }
+
+    .content .feature-bot .slogan {
+        margin-top: -50px;
+    }
+}
+
+@media (width < 1000px) {
+    .content .feature-bot .bot-name {
+        font-size: 300px;
+    }
+
+    .content .feature-bot .slogan {
+        margin-top: -50px;
+    }
+}
+
+@media (width < 700px) {
+    .content .feature-bot .bot-name {
+        font-size: 200px;
+    }
+
+    .content .feature-bot .slogan {
+        margin-top: -40px;
     }
 }
